@@ -1,28 +1,29 @@
 .sidebar {
-  background-color: #1E1F25;
-  width: 94px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .logo {
-    position: absolute;
+    position: fixed;
+    width: max-content;
     top: 0;
-  }
-}
+    bottom: 0;
+    left: 0;
+    background-color: #1E1F25;
 
+    .logo {
+        width: 64px;
+        height: 64px;
+        padding: 1em;
+    }
 
-.menu {
-  ul {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-  li {
-    list-style: none;
-  }
+    .menu {
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+
+        ul li {
+            list-style: none;
+            cursor: pointer;
+            margin: 1em auto;
+        }
+    }
+
 }
