@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <div class="logo">
+    <img src="/assets/images/sidebar/logo.png" alt="Octom">
+  </div>
+  <nav class="menu" role="navigation">
+    <ul>
+      <ng-container *ngFor="let item of items" role="navigation">
+        <li routerLink='/{{item}}' routerLinkActive="is-active" title="{{item}}">
+          <img class="menu__icon" src="/assets/images/sidebar/{{item}}-icon.svg" alt={{item}} />
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+  <div aria-hidden="true">
+    <small>v{{version}}</small>
+  </div>
+</div>
