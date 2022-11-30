@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './login/auth/auth.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
+import { InputComponent } from './_form/input/input.component';
 
 
 
@@ -32,7 +33,8 @@ import { ForgotPasswordComponent } from './login/forgot-password/forgot-password
     LoginComponent,
     AuthComponent,
     RegisterComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
