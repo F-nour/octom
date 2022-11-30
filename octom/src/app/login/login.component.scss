@@ -5,19 +5,25 @@
   height: 100vh;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex: 1 0;
+.background {
+  background-image: url('/assets/images/login/photo.png');
+  background-size: cover;
+  background-position: center;
+  width: 70%;
 }
 
 .login-content {
   display: flex;
-  width: 35%;
-  height: 100vh;
+  width: 30%;
+  flex-direction: column;
   background-color: #fff;
   color: black;
   padding: 0.5em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
 }

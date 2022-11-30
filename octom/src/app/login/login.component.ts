@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  auth: boolean = false;
+  register: boolean = false;
+  forgetPassword: boolean = false;
+
+  constructor(private router: Router) {
+    router.events.forEach((event) => {
+      if (event instanceof NavigationStart) {
+        if (event['url'] == '/login/register') {
+          this.register = true;
+        } else if (event['url'] == '/login/forgetPassword') {
+          this.forgetPassword = true;
+        } else {
+          this.auth = true;
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
   }

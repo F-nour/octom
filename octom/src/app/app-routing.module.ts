@@ -8,6 +8,9 @@ import { SettingsComponent } from './_pages/settings/settings.component';
 import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { FilesComponent } from './_pages/files/files.component';
 import { LoginComponent } from './login/login.component';
+import { AuthComponent } from './login/auth/auth.component';
+import { RegisterComponent } from './login/register/register.component';
+import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {
@@ -37,7 +40,26 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    children: [
+      {
+        path: 'auth',
+        component: AuthComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
+      },
+      {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent
+      },
+      {
+        path: '',
+        redirectTo: 'auth',
+        pathMatch: 'full'
+      }
+    ]
   },
   {
     path: '',
