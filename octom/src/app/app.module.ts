@@ -13,6 +13,8 @@ import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { FilesComponent } from './_pages/files/files.component';
 import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './login/auth/auth.component';
+import { RegisterComponent } from './login/register/register.component';
+import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 
 
 
@@ -29,6 +31,8 @@ import { AuthComponent } from './login/auth/auth.component';
     FilesComponent,
     LoginComponent,
     AuthComponent,
+    RegisterComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

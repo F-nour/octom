@@ -12,17 +12,5 @@ export class AppComponent {
 
   ngOnInit(): void {};
 
-
-  constructor(private router: Router) {
-    router.events.forEach((event) => {
-      if (event instanceof NavigationStart) {
-        if (event['url'] == '/login' || event['url'] == '/') {
-          this.isLoginPage = false;
-        } else {
-          this.isLoginPage = true;
-        }
-      }
-    });
+  
   }
-
-}
