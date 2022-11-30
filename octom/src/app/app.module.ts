@@ -11,6 +11,8 @@ import { EbooksComponent } from './_pages/ebooks/ebooks.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { FilesComponent } from './_pages/files/files.component';
+import { LoginComponent } from './login/login.component';
+import { AuthComponent } from './login/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { FilesComponent } from './_pages/files/files.component';
     SettingsComponent,
     MessengerComponent,
     FilesComponent,
-
+    LoginComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
