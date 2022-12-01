@@ -1,9 +1,20 @@
 <div class="form-group">
-  <label for="{{ field }}" class="form-label">{{ ph }}</label>
-  <input class="form-control"
+  <label for="{{ nameForm }}{{ field | titlecase }}" class="form-label">
+    {{ label }}
+    <ng-container *ngIf="labelUnvisible">
+      <span class="sr-only">{{ labelUnvisible }}</span>
+    </ng-container>
+  </label>
+  <input
+    class="form-control {{ inputClassName }}"
     type="{{ type }}"
-    id="{{ field }}"
+    id="{{ nameForm }}{{ field | titlecase }}"
     name="{{ field }}"
     placeholder="{{ ph }}"
   />
+  <ng-container *ngIf="type == 'password'">
+    <button type="button" click="viewPwd" class="btn btn-viewPwd">
+      <span class="sr-only">Voir le mot de passe saisit</span>
+    </button>
+  </ng-container>
 </div>
