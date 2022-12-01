@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  nameForm: string;
+
+  constructor() {
+    this.nameForm = "auth"
+  }
 
   ngOnInit(): void {
   }

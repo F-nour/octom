@@ -32,7 +32,7 @@ import { InputComponent } from './_form/input/input.component';
     AuthComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    InputComponent
+    InputComponent,
   ],
   imports: [
     BrowserModule,

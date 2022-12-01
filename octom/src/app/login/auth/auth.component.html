@@ -1,1 +1,13 @@
-<app-input field="username" type="email" ph="Votre nom"></app-input>
+<form name="{{ nameForm }}">
+  <app-input
+    nameForm="{{ nameForm }}"
+    label="login"
+    labelUnvisible="Email or phone number"
+    field="username"
+    type="email"
+    ph="Email or phone number"
+  ></app-input>
+  <app-input nameForm="{{ nameForm }}" label="Password" field="password" type="password" ph="Enter password" >
+
+  </app-input>
+</form>
