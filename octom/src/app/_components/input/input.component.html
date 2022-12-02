@@ -15,8 +15,8 @@
       #input
       (change)="emitInput(input.value)"
     />
-    <ng-container *ngIf="type == 'password'">
-      <div class="viewPwd" (click)="viewPwd" tabindex="0">
+    <ng-container *ngIf="isPwd">
+      <div class="viewPwd" (click)="viewPwd()" tabindex="0">
         <app-icon [icon]="faEye">Visualiser le mot de passe</app-icon>
       </div>
     </ng-container>

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class AuthComponent implements OnInit {
+export class LoginComponent implements OnInit {
   login!: string;
 
   nameForm: string;
@@ -20,5 +20,5 @@ export class AuthComponent implements OnInit {
   loginListener(login: string) {
     this.login = login;
     console.log(login)
-  }
+    }
 }

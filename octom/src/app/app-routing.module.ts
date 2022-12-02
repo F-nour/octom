@@ -7,10 +7,10 @@ import { EbooksComponent } from './_pages/ebooks/ebooks.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { FilesComponent } from './_pages/files/files.component';
-import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './login/auth/auth.component';
-import { RegisterComponent } from './login/register/register.component';
-import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 
 const parentTitle = 'Octom - '
 
@@ -46,12 +46,12 @@ const routes: Routes = [
     title: parentTitle + 'files'
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'auth',
+    component: AuthComponent,
     children: [
       {
-        path: 'auth',
-        component: AuthComponent,
+        path: 'login',
+        component: LoginComponent,
         title: parentTitle + 'authentification'
       },
       {
@@ -66,14 +66,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'auth',
+        redirectTo: 'login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/login/auth',
+    redirectTo: '/auth/login',
     pathMatch: 'full'
   }
 ];

@@ -3,7 +3,7 @@
     [class]="'form-control form-checkbox ' + inputClassName"
     type="checkbox"
     [id]="id"
-    [name]="field"
+    [name]="field" #checkbox (change)="emitCheckbox(checkbox.value)"
   />
   <label [for]="id" class="form-label">
     <small>{{ label }}</small>

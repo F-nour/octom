@@ -1,12 +1,13 @@
-.login-container {
+.auth-container {
   margin-left: -7em;
   display: flex;
+  flex: 1;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .background {
-  background-image: url("/assets/images/login/photo.png");
+  background-image: url("/assets/images/auth/photo.png");
   background-size: cover;
   background-position: center;
   width: 70%;
@@ -15,7 +16,7 @@
   }
 }
 
-.login-content {
+.auth-content {
   width: 30%;
   background-color: #fff;
   color: black;
@@ -24,7 +25,7 @@
   }
 }
 
-.login-routes-container {
+.auth-routes-container {
   width: 80%;
   margin: auto;
   display: flex;
@@ -46,5 +47,3 @@
     justify-content: center;
   }
 }
-
-

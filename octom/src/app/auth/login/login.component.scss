@@ -1,5 +1,5 @@
 
-.auth {
+.login {
   display: flex;
   flex-direction: column;
   gap: 3em;
@@ -11,7 +11,7 @@
   }
 }
 
-.auth-check, app-checkbox {
+.login-check, app-checkbox {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  a {
+  p {
     text-align: center;
   }
 }

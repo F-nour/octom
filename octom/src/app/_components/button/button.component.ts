@@ -16,7 +16,6 @@ export class ButtonComponent implements OnInit {
 
 
   @Input() type!: string;
-  @Input() value!: string | null;
   @Output() click!: MethodDecorator | EventEmitter<any|null> | string | void;
   @Input() className!: string;
   @Input() icon!: IconDefinition | null;

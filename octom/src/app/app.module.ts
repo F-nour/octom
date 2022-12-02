@@ -11,10 +11,10 @@ import { EbooksComponent } from './_pages/ebooks/ebooks.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { FilesComponent } from './_pages/files/files.component';
-import { LoginComponent } from './login/login.component';
-import { AuthComponent } from './login/auth/auth.component';
-import { RegisterComponent } from './login/register/register.component';
-import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { InputComponent } from './_components/input/input.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -36,8 +36,8 @@ import { IconComponent } from './_components/icon/icon.component';
     SettingsComponent,
     MessengerComponent,
     FilesComponent,
-    LoginComponent,
     AuthComponent,
+    LoginComponent,
     RegisterComponent,
     ForgotPasswordComponent,
     InputComponent,
