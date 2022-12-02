@@ -52,7 +52,7 @@ app-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  &:focus {
+  &:focus, &:hover {
     outline: none;
       box-shadow: 0px 4px 0px 0px black;
   }

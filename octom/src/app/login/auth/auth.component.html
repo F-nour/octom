@@ -8,7 +8,7 @@
       field="username"
       type="email"
       ph="Email or phone number"
-      (inputEmitter)="loginListener($event)"
+      (inputEmitter)="authListener($event)"
     ></app-input>
     <app-input
       [nameForm]="nameForm"
@@ -16,7 +16,7 @@
       field="password"
       type="password"
       ph="Enter password"
-      (inputEmitter)="loginListener($event)"
+      (inputEmitter)="authListener($event)"
     >
     </app-input>
     <div class="auth-check">
@@ -24,16 +24,16 @@
         [nameForm]="nameForm"
         label="Remember me"
         field="remember"
-        (checkboxEmitter)="loginListener($event)"
+        (checkboxEmitter)="authListener($event)"
       ></app-checkbox>
       <a routerLink="/login/forgot-password">Forgot password</a>
     </div>
     <div class="form-group-buttons">
-      <app-button type="submit" className="btn-primary" click>Sign up</app-button>
-      <app-button type="button" className="btn-google" click>
+      <app-button type="submit" className="btn-primary">Sign in</app-button>
+      <app-button type="button" className="btn-google">
         <img class="google" src="/assets/images/login/google.svg" [hidden] />
-        <span>Or sign-up on google</span></app-button>
-        <a routerLink="/login/register">Create a new account</a>
+        <span>Or sign in with Google</span></app-button>
+        <p>Don't have an account ? <a routerLink="/login/register">Sign up</a>
     </div>
   </form>
 </div>
