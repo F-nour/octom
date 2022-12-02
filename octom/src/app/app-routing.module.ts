@@ -51,15 +51,18 @@ const routes: Routes = [
     children: [
       {
         path: 'auth',
-        component: AuthComponent
+        component: AuthComponent,
+        title: parentTitle + 'authentification'
       },
       {
         path: 'register',
-        component: RegisterComponent
+        component: RegisterComponent,
+        title: parentTitle + 'registration'
       },
       {
         path: 'forgot-password',
-        component: ForgotPasswordComponent
+        component: ForgotPasswordComponent,
+        title: parentTitle + 'forgot password'
       },
       {
         path: '',
@@ -70,7 +73,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/login/auth',
     pathMatch: 'full'
   }
 ];

@@ -1,0 +1,11 @@
+<div [class]="'form-group ' + containerClassName">
+  <input
+    [class]="'form-control form-checkbox ' + inputClassName"
+    type="checkbox"
+    [id]="id"
+    [name]="field"
+  />
+  <label [for]="id" class="form-label">
+    <small>{{ label }}</small>
+  </label>
+</div>

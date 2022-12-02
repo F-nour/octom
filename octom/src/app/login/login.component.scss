@@ -6,19 +6,35 @@
 }
 
 .background {
-  background-image: url('/assets/images/login/photo.png');
+  background-image: url("/assets/images/login/photo.png");
   background-size: cover;
   background-position: center;
   width: 70%;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 }
 
 .login-content {
-  display: flex;
   width: 30%;
-  flex-direction: column;
   background-color: #fff;
   color: black;
-  padding: 0.5em;
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+}
+
+.login-routes-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 4em;
+  @media screen and (max-width: 650px) {
+    width: 90%;
+    margin-top: 1em;
+  }
 }
 
 .logo {
@@ -26,4 +42,9 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1em;
+  @media screen and (max-width: 650px) {
+    justify-content: center;
+  }
 }
+
+

@@ -15,7 +15,13 @@ import { LoginComponent } from './login/login.component';
 import { AuthComponent } from './login/auth/auth.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
-import { InputComponent } from './_form/input/input.component';
+import { InputComponent } from './_components/input/input.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CheckboxComponent } from './_components/checkbox/checkbox.component';
+import { ButtonComponent } from './_components/button/button.component';
+import { IconComponent } from './_components/icon/icon.component';
+
 
 
 
@@ -35,10 +41,14 @@ import { InputComponent } from './_form/input/input.component';
     RegisterComponent,
     ForgotPasswordComponent,
     InputComponent,
+    CheckboxComponent,
+    ButtonComponent,
+    IconComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

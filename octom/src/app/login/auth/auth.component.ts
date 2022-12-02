@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+  login!: string;
 
   nameForm: string;
 
@@ -16,4 +17,8 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  loginListener(login: string) {
+    this.login = login;
+    console.log(login)
+  }
 }
