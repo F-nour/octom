@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgot-password.component.scss']
 })
 export class ForgotPasswordComponent implements OnInit {
+  forgotPwd!: string;
 
-  constructor() { }
+  nameForm: string;
+
+  constructor() {
+    this.nameForm = "forgotPwd"
+  }
 
   ngOnInit(): void {
   }
 
+  forgotPwdListener(forgotPwd: string) {
+    this.forgotPwd = forgotPwd;
+  }
 }
