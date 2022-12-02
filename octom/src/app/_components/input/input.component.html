@@ -1,0 +1,24 @@
+<div [class]="'form-group ' + containerClassName">
+  <label [for]="id" class="form-label">
+    <small>{{ label }}</small>
+    <ng-container *ngIf="labelUnvisible">
+      <span class="sr-only">{{ labelUnvisible }}</span>
+    </ng-container>
+  </label>
+  <div class="form-input">
+    <input
+      [class]="'form-control ' + inputClassName"
+      [type]="type"
+      [id]="id"
+      [name]="field"
+      [placeholder]="ph"
+      #input
+      (change)="emitInput(input.value)"
+    />
+    <ng-container *ngIf="type == 'password'">
+      <div class="viewPwd" (click)="viewPwd" tabindex="0">
+        <app-icon [icon]="faEye">Visualiser le mot de passe</app-icon>
+      </div>
+    </ng-container>
+  </div>
+</div>

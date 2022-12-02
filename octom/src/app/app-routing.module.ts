@@ -12,15 +12,19 @@ import { AuthComponent } from './login/auth/auth.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 
+const parentTitle = 'Octom - '
+
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    title: 'dashboard'
 
   },
   {
     path: 'activity',
-    component: ActivityComponent
+    component: ActivityComponent,
+    title: parentTitle + 'activity'
   },
   {
     path: 'ebooks',
@@ -28,15 +32,18 @@ const routes: Routes = [
   },
   {
     path:'settings',
-    component: SettingsComponent
+    component: SettingsComponent,
+    title: parentTitle + 'settings'
   },
   {
     path:'messenger',
     component: MessengerComponent,
+    title: parentTitle + 'messenger'
   },
   {
     path:'files',
-    component: FilesComponent
+    component: FilesComponent,
+    title: parentTitle + 'files'
   },
   {
     path: 'login',
@@ -44,15 +51,18 @@ const routes: Routes = [
     children: [
       {
         path: 'auth',
-        component: AuthComponent
+        component: AuthComponent,
+        title: parentTitle + 'authentification'
       },
       {
         path: 'register',
-        component: RegisterComponent
+        component: RegisterComponent,
+        title: parentTitle + 'registration'
       },
       {
         path: 'forgot-password',
-        component: ForgotPasswordComponent
+        component: ForgotPasswordComponent,
+        title: parentTitle + 'forgot password'
       },
       {
         path: '',
@@ -63,7 +73,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/login/auth',
     pathMatch: 'full'
   }
 ];
