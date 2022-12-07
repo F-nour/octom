@@ -1,0 +1,30 @@
+header {
+  background-color: #1E1F25;
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 1em;
+  ul, li {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    list-style: none;
+    cursor: pointer;
+  }
+}
+
+.search-bar input {
+  color: #9BABC5;
+}

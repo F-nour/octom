@@ -1,0 +1,39 @@
+.sidebar {
+  background-color: #1e1f25;
+  width: max-content;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  .logo {
+    justify-self: flex-start;
+    width: 64px;
+    height: 64px;
+    padding: 1em;
+  }
+}
+
+.menu {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.6em;
+    border-radius: 30%;
+    width: max-content;
+    height: max-content;
+    line-height: 0;
+  }
+  .is-active {
+    background-color: #5051F9;
+  }
+}
