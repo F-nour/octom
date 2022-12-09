@@ -13,6 +13,7 @@ import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { FilesComponent } from './_pages/files/files.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,10 +25,11 @@ import { FilesComponent } from './_pages/files/files.component';
     SettingsComponent,
     MessengerComponent,
     FilesComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
