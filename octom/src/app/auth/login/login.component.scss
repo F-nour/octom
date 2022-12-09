@@ -33,9 +33,7 @@ app-input {
   flex-direction: column;
 }
 
-a {
-  color: #007AFF;
-}
+
 
 .form-group-buttons, app-button {
   display: flex;
@@ -48,4 +46,11 @@ a {
 
 .google {
   padding: 0 5px;
+}
+
+a {
+  color: #007AFF;
+  &:hover, &:focus {
+    color: #0061a7
+  }
 }

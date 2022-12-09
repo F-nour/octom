@@ -10,18 +10,15 @@ import '@fortawesome/free-solid-svg-icons';
 export class ButtonComponent implements OnInit {
   ngOnInit(): void {
     if (this.type === 'submit') {
-      this.click = this.clickEmitter;
+      this.click.emit();
     }
   }
 
 
   @Input() type!: string;
-  @Output() click!: MethodDecorator | EventEmitter<any|null> | string | void;
+  @Output() click: EventEmitter<any|null> = new EventEmitter<any|null>()
   @Input() className!: string;
   @Input() icon!: IconDefinition | null;
   @Input() iconDescription!: string | null;
-
-  clickEmitter: EventEmitter<any|null> = new EventEmitter<any|null>();
-
 
 }

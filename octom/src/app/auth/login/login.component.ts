@@ -19,6 +19,5 @@ export class LoginComponent implements OnInit {
 
   loginListener(login: string) {
     this.login = login;
-    console.log(login)
-    }
+  }
 }
