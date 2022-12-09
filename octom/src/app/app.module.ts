@@ -21,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CheckboxComponent } from './_components/checkbox/checkbox.component';
 import { ButtonComponent } from './_components/button/button.component';
 import { IconComponent } from './_components/icon/icon.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -48,6 +49,7 @@ import { IconComponent } from './_components/icon/icon.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [],
