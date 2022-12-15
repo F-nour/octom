@@ -79,3 +79,37 @@ a {
     box-shadow: 0px 4px 0px 0px black;
   }
 }
+
+.btn {
+  margin: 0;
+  padding: 0.5em 0;
+  border-radius: 4%;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  height: 3em;
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007AFF;
+  &:hover, &:focus {
+    background-color: #0061a7
+  }
+  &:disabled {
+    background-color: #007AFF80;
+    color: #ffffff80;
+    &:hover, &:focus {
+      background-color: #007AFF80;
+    }
+  }
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}

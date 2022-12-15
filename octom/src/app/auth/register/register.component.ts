@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { Router, RouteReuseStrategy, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,18 +15,17 @@ export class RegisterComponent {
 
   registerForm!: FormGroup
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.nameForm = "register"
   }
 
   ngOnInit(): void {
 
-    this.registerForm = this.formBuilder.group ({
-      name: [null],
-      firstname: [null],
-      username: [null],
-      password: [null],
-      confirmPassword: [null]
+    this.registerForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
+      firstname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
+      username: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
     })
   }
 
@@ -37,7 +37,7 @@ export class RegisterComponent {
 
 
   submit() {
-    alert("bravo!");
+    this.router.navigate(["/auth/login"]);
     return;
   }
 }

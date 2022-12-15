@@ -3,7 +3,7 @@
   <form [formGroup]="registerForm" (ngSubmit)="submit()">
     <div class="form-group">
       <label for="name" class="form-label">
-        <small>Nom de famille</small>
+        <small>Last name <span class="required">*</span></small>
       </label>
       <div class="form-input">
         <input
@@ -11,14 +11,15 @@
           type="texte"
           id="name"
           name="name"
-          placeholder="nom"
+          required
+          placeholder="last name"
           formControlName="name"
         />
       </div>
     </div>
     <div class="form-group">
       <label for="firstname" class="form-label">
-        <small>Prénom</small>
+        <small>First name <span class="required">*</span></small>
       </label>
       <div class="form-input">
         <input
@@ -26,14 +27,15 @@
           type="texte"
           id="firstname"
           name="firstname"
-          placeholder="prénom"
+          required
+          placeholder="first name"
           formControlName="firstname"
         />
       </div>
     </div>
     <div class="form-group">
       <label for="username" class="form-label">
-        <small>Nom de famille</small>
+        <small>Username <span class="required">*</span></small>
       </label>
       <div class="form-input">
         <input
@@ -41,14 +43,15 @@
           type="texte"
           id="username"
           name="username"
-          placeholder="adresse e-mail"
+          required
+          placeholder="email adress"
           formControlName="username"
         />
       </div>
     </div>
     <div class="form-group">
       <label for="password" class="form-label">
-        <small>Nom de famille</small>
+        <small>Password <span class="required">*</span></small>
       </label>
       <div class="form-input">
         <input
@@ -56,30 +59,20 @@
           type="texte"
           id="password"
           name="password"
-          placeholder="mot de passe"
+          required
+          placeholder="Password"
           formControlName="password"
         />
       </div>
     </div>
-    <div class="form-group">
-      <label for="confirmPassword" class="form-label">
-        <small>Nom de famille</small>
-      </label>
-      <div class="form-input">
-        <input
-          class="form-control"
-          type="texte"
-          id="confirmPassword"
-          name="confirmPassword"
-          placeholder="confirmer votre mot de passe"
-          formControlName="confirmPassword"
-        />
-      </div>
-    </div>
     <div class="form-group-buttons">
-      <app-button type="submit" className="btn-primary" click
-        >Register</app-button
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="registerForm.invalid"
       >
+        Register
+      </button>
       <a routerLink="/auth/login">Sign in</a>
     </div>
   </form>

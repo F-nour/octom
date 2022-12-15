@@ -7,6 +7,9 @@
   font-weight: bold;
   height: 3em;
   cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .btn-primary {
@@ -14,6 +17,12 @@
   background-color: #007AFF;
   &:hover, &:focus {
     background-color: #0061a7
+  }
+  &:disabled {
+    background-color: #5f85a7;
+    &:hover, &:focus {
+      background-color: #5f85a7;
+    }
   }
 }
 
