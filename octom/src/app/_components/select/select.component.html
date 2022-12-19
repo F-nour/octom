@@ -1,0 +1,18 @@
+<label [for]="id" class="form-label">
+  <small [ngClass]="{ 'sr-only': labelUnvisible }"
+    >{{ label }}
+    <span *ngIf="required" class="required"> * </span>
+  </small>
+</label>
+<select
+  [formControl]="control"
+  class="form-select"
+  [id]="id"
+  [name]="field"
+  [required]="required"
+>
+  <option selected value="">{{ label }}...</option>
+  <ng-container *ngFor="let value of values">
+    <option value="{{ value }}">{{ value }}</option>
+  </ng-container>
+</select>

@@ -27,7 +27,8 @@ export class ForgotPasswordComponent implements OnInit {
 
 
   formSubmit() {
+    console.log(this.forgotPwdForm.value)
     if (this.forgotPwdForm.invalid) return;
-    this.router.navigate(['/login']);
+    console.log("it's ok!")
   }
 }

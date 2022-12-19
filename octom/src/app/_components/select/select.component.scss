@@ -1,0 +1,17 @@
+.form-label .sr-only{
+  padding-left: 0;
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
+}
+
+.form-select {
+  border: none;
+  padding: 1em;
+  align-items: center;
+  background-color: #e5e5e5;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 0px 0px black;
+  }
+}

@@ -1,22 +1,22 @@
 import { TitleCasePipe } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormControlDirective, ControlContainer } from '@angular/forms';
 
 @Component({
-  selector: 'app-checkbox',
-  templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  selector: 'app-select',
+  templateUrl: './select.component.html',
+  styleUrls: ['./select.component.scss']
 })
-export class CheckboxComponent implements OnInit, ControlValueAccessor {
+export class SelectComponent implements OnInit, ControlValueAccessor {
 
-  @Input() nameForm!: string | null
-  @Input() containerClassName: string = '';
-  @Input() labelClassName: string = '';
-  @Input() inputClassName: string = '';
+  @Input() nameForm!: string;
   @Input() field!: string;
-  @Input() label!: string;
-
   id!: string;
+
+  @Input() label!: string;
+  @Input() labelUnvisible: boolean = false;
+  @Input() values!: string[];
+  @Input() required: boolean = false;
 
   @Input() formControl: FormControl<any> | any;
   @Input() formControlName!: string;
@@ -31,7 +31,7 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
     this.id = this.nameForm + new TitleCasePipe().transform(this.field);
     this.formControlName = this.field;
     this.formControl = new FormControl(this.formControlName)
-
+    console.log(this.formControlName);
   }
 
   // get controlName with control
@@ -44,18 +44,19 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
   // register value on touch
   registerOnTouched(fn: any): void {
     if (this.formControlDirective.valueAccessor)
-    this.formControlDirective.valueAccessor.registerOnTouched(fn);
+      this.formControlDirective.valueAccessor.registerOnTouched(fn);
   }
 
-    // register value if change
+  // register value if change
   registerOnChange(fn: any): void {
     if (this.formControlDirective.valueAccessor)
-    this.formControlDirective.valueAccessor.registerOnChange(fn);
+      this.formControlDirective.valueAccessor.registerOnChange(fn);
   }
 
   // write value of input on object
   writeValue(obj: any): void {
     if (this.formControlDirective.valueAccessor)
-    this.formControlDirective.valueAccessor.writeValue(obj);
+      this.formControlDirective.valueAccessor.writeValue(obj);
   }
+
 }

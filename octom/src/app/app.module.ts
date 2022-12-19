@@ -23,6 +23,7 @@ import { ButtonComponent } from './_components/button/button.component';
 import { IconComponent } from './_components/icon/icon.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SubmitButtonComponent } from './_components/submit-button/submit-button.component';
+import { SelectComponent } from './_components/select/select.component';
 
 
 
@@ -47,6 +48,7 @@ import { SubmitButtonComponent } from './_components/submit-button/submit-button
     ButtonComponent,
     IconComponent,
     SubmitButtonComponent,
+    SelectComponent,
   ],
   imports: [
     BrowserModule,

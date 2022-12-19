@@ -40,5 +40,25 @@ a {
   gap: 2em;
 }
 
+.phones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
 
+.phone {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
+.phone-label {
+  padding-left: 0.5em;
+}
+.required {
+  color: red;
+  font-weight: bold;
+}

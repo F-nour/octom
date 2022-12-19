@@ -4,10 +4,17 @@
   gap: 0.5em;
 }
 
+.phone-group {
+  gap: 0 !important;
+}
+
 .form-label {
   padding-left: 1em;
   @media screen and (max-width: 650px) {
     display: none;
+  }
+  & .sr-only {
+    padding: 0;
   }
 }
 

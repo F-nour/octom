@@ -27,7 +27,7 @@ export class InputComponent implements ControlValueAccessor {
   @Input() type: string = 'text';
   @Input() field!: string;
   @Input() label!: string;
-  @Input() labelUnvisible!: string;
+  @Input() labelUnvisible: boolean = false;
   @Input() ph: string = '';
   @Input() required!: boolean
   isPwd: boolean = true;
@@ -36,8 +36,6 @@ export class InputComponent implements ControlValueAccessor {
 
   @ViewChild(FormControlDirective, { static: true })
   formControlDirective!: FormControlDirective;
-  private value!: string;
-  private disabled!: boolean;
 
   constructor(private controlContainer: ControlContainer) {
   }

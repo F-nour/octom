@@ -15,8 +15,33 @@
       field="name"
       ph="Last name"
       [required]="true"
-    >
-    </app-input>
+    ></app-input>
+    <div formArrayName="phones" class="phones">
+      <small class="phone-label"
+        >Phone number <span class="required">*</span></small
+      >
+      <div
+        *ngFor="let phone of phones.controls; let i = index"
+        [formGroupName]="i"
+        class="phone"
+      >
+        <app-select
+          [nameForm]="nameForm"
+          label="Phone prefix"
+          [labelUnvisible]="true"
+          field="phonePrefix"
+          [values]="values"
+        ></app-select>
+        <app-input
+          containerClassName="phone-group"
+          [nameForm]="nameForm"
+          [labelUnvisible]="true"
+          field="phoneNumber"
+          ph="0123456789"
+          [required]="true"
+        ></app-input>
+      </div>
+    </div>
     <app-input
       [nameForm]="nameForm"
       label="Username"
@@ -36,7 +61,9 @@
     >
     </app-input>
     <div class="form-group-buttons">
-      <app-submit-button [disabled]="registerForm.invalid">Register</app-submit-button>
+      <app-submit-button [disabled]="registerForm.invalid"
+        >Register</app-submit-button
+      >
       <a routerLink="/auth/login">Sign in</a>
     </div>
   </form>
