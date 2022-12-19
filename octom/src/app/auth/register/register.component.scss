@@ -58,24 +58,14 @@ a {
   width: 100%;
 }
 
-.form-input {
+.form-control {
   border: none;
-  display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #e5e5e5;
   &:hover,
   &:focus {
-    box-shadow: 0px 4px 0px 0px black;
-  }
-}
-
-.form-control {
-  border: none;
-  background: initial;
-  &:focus {
-    outline: none;
     box-shadow: 0px 4px 0px 0px black;
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
@@ -9,15 +11,23 @@ export class ForgotPasswordComponent implements OnInit {
   forgotPwd!: string;
 
   nameForm: string;
+  forgotPwdForm!: FormGroup;
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.nameForm = "forgotPwd"
   }
 
   ngOnInit(): void {
+    this.forgotPwdForm = this.formBuilder.group({
+      username: ['', [Validators.required, Validators.email]],
+    })
   }
 
-  forgotPwdListener(forgotPwd: string) {
-    this.forgotPwd = forgotPwd;
+  get username() { return this.forgotPwdForm.get('username'); }
+
+
+  formSubmit() {
+    if (this.forgotPwdForm.invalid) return;
+    this.router.navigate(['/login']);
   }
 }

@@ -12,9 +12,8 @@
       [id]="id"
       [name]="field"
       [placeholder]="ph"
-      #input
-      (change)="emitInput(input.value)"
-    />
+      [formControl]="control"
+      />
     <ng-container *ngIf="isPwd">
       <div class="viewPwd" (click)="viewPwd()" tabindex="0">
         <app-icon [icon]="faEye">Visualiser le mot de passe</app-icon>

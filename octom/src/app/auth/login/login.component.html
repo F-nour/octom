@@ -1,6 +1,6 @@
 <div class="login">
   <h2>Nice to see you again</h2>
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
     <app-input
       [nameForm]="nameForm"
       label="login"
@@ -8,7 +8,6 @@
       field="username"
       type="email"
       ph="Email or phone number"
-      (inputEmitter)="loginListener($event)"
     ></app-input>
     <app-input
       [nameForm]="nameForm"
@@ -16,7 +15,6 @@
       field="password"
       type="password"
       ph="Enter password"
-      (inputEmitter)="loginListener($event)"
     >
     </app-input>
     <div class="login-check">
@@ -24,7 +22,6 @@
         [nameForm]="nameForm"
         label="Remember me"
         field="remember"
-        (checkboxEmitter)="loginListener($event)"
       ></app-checkbox>
       <a routerLink="/auth/forgot-password">Forgot password</a>
     </div>
