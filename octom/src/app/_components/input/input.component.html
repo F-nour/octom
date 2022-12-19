@@ -1,6 +1,7 @@
 <div [class]="'form-group ' + containerClassName">
   <label [for]="id" class="form-label">
     <small>{{ label }}</small>
+    <span *ngIf="required" class="required"> * </span>
     <ng-container *ngIf="labelUnvisible">
       <span class="sr-only">{{ labelUnvisible }}</span>
     </ng-container>
@@ -13,6 +14,7 @@
       [name]="field"
       [placeholder]="ph"
       [formControl]="control"
+      [required]="required"
       />
     <ng-container *ngIf="isPwd">
       <div class="viewPwd" (click)="viewPwd()" tabindex="0">

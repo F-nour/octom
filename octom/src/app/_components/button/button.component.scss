@@ -20,6 +20,7 @@
   }
   &:disabled {
     background-color: #5f85a7;
+    cursor: not-allowed;
     &:hover, &:focus {
       background-color: #5f85a7;
     }

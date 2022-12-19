@@ -51,8 +51,10 @@ export class RegisterComponent {
     });
   }
 
-  submit() {
-    this.router.navigate(["/auth/login"]);
-    return;
+  registerFormSubmit() {
+    console.log(this.registerForm.value)
+    if (this.registerForm.invalid) return;
+    console.log("it's ok!")
+    this.router.navigate(["auth/login"]);
   }
 }

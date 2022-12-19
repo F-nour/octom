@@ -1,87 +1,42 @@
 <div class="register">
   <h2>Register you !</h2>
-  <form [formGroup]="registerForm" (ngSubmit)="submit()">
-    <div class="form-group">
-      <label for="name" class="form-label">
-        <small>Last name <span class="required">*</span></small>
-      </label>
-      <input
-        class="form-control"
-        type="texte"
-        id="name"
-        name="name"
-        required
-        placeholder="last name"
-        formControlName="name"
-      />
-    </div>
-    <div class="form-group">
-      <label for="firstname" class="form-label">
-        <small>First name <span class="required">*</span></small>
-      </label>
-      <input
-        class="form-control"
-        type="texte"
-        id="firstname"
-        name="firstname"
-        required
-        placeholder="first name"
-        formControlName="firstname"
-      />
-    </div>
-    <div class="form-group">
-      <label for="phone" class="form-label">
-        <small>Phone number <span class="required">*</span></small>
-      </label>
-      <div class="phone number" formArrayName="phone">
-
-        <input
-          class="form-control"
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          placeholder="phone number"
-          formControlName="username"
-        />
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="username" class="form-label">
-        <small>Username <span class="required">*</span></small>
-      </label>
-      <input
-        class="form-control"
-        type="texte"
-        id="username"
-        name="username"
-        required
-        placeholder="email adress"
-        formControlName="username"
-      />
-    </div>
-    <div class="form-group">
-      <label for="password" class="form-label">
-        <small>Password <span class="required">*</span></small>
-      </label>
-      <input
-        class="form-control"
-        type="texte"
-        id="password"
-        name="password"
-        required
-        placeholder="Password"
-        formControlName="password"
-      />
-    </div>
+  <form [formGroup]="registerForm" (ngSubmit)="registerFormSubmit()">
+    <app-input
+      [nameForm]="nameForm"
+      label="first name"
+      field="firstname"
+      ph="first name"
+      [required]="true"
+    >
+    </app-input>
+    <app-input
+      [nameForm]="nameForm"
+      label="Last name"
+      field="name"
+      ph="Last name"
+      [required]="true"
+    >
+    </app-input>
+    <app-input
+      [nameForm]="nameForm"
+      label="Username"
+      field="username"
+      ph="Email adress"
+      type="email"
+      [required]="true"
+    >
+    </app-input>
+    <app-input
+      [nameForm]="nameForm"
+      label="Password"
+      field="password"
+      type="password"
+      ph="Enter password"
+      [required]="true"
+    >
+    </app-input>
     <div class="form-group-buttons">
-      <button
-        type="submit"
-        class="btn btn-primary"
-        [disabled]="registerForm.invalid"
-      >
-        Register
-      </button>
+      <app-submit-button [disabled]="registerForm.invalid">Register</app-submit-button>
       <a routerLink="/auth/login">Sign in</a>
     </div>
   </form>

@@ -22,6 +22,7 @@ import { CheckboxComponent } from './_components/checkbox/checkbox.component';
 import { ButtonComponent } from './_components/button/button.component';
 import { IconComponent } from './_components/icon/icon.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SubmitButtonComponent } from './_components/submit-button/submit-button.component';
 
 
 
@@ -45,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CheckboxComponent,
     ButtonComponent,
     IconComponent,
+    SubmitButtonComponent,
   ],
   imports: [
     BrowserModule,

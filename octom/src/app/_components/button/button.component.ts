@@ -9,9 +9,6 @@ import '@fortawesome/free-solid-svg-icons';
 })
 export class ButtonComponent implements OnInit {
   ngOnInit(): void {
-    if (this.type === 'submit') {
-      this.click.emit();
-    }
   }
 
 
