@@ -15,7 +15,7 @@ export class ButtonComponent implements OnInit {
   @Input() type!: string;
   @Output() click: EventEmitter<any|null> = new EventEmitter<any|null>()
   @Input() className!: string;
-  @Input() icon!: IconDefinition | null;
-  @Input() iconDescription!: string | null;
+  @Input() icon!: IconDefinition;
+  @Input() iconDescription!: string;
 
 }

@@ -13,8 +13,8 @@ export class SubmitButtonComponent implements OnInit {
   @Input() className: string = '';
   path!: string;
   nameForm!: FormGroup;
-  @Input() icon!: IconDefinition | null;
-  @Input() iconDescription!: string | null;
+  @Input() icon!: IconDefinition;
+  @Input() iconDescription!: string;
   @Input() disabled!: boolean;
 
 

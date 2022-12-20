@@ -1,10 +1,11 @@
 <header>
   <div class="search-bar">
-    <label for="search" class="sr-only">Search</label>
-    <input id="search" class="search" type="text" placeholder="Search everything...">
-    <button type="submit" name="search-button" id="searchButton">
-      <img src="/assets/images/header/search-loop.png" alt="Search"/>
-    </button>
+    <form [formGroup]="search" (ngSubmit)="searchSubmit()" class="search-form">
+      <app-input [labelUnvisible]="true" [nameForm]="field" [label]="field | titlecase " [field]="field" ph="{{field | titlecase }} everything..." [required]="true">
+        <app-submit-button className="btn-icon" [icon]="searchIcon" [iconDescription]="field | titlecase ">
+        </app-submit-button>
+      </app-input>
+  </form>
   </div>
   <div class="settings">
       <ul>

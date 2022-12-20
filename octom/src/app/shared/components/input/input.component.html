@@ -16,9 +16,8 @@
       [required]="required"
     />
     <ng-container *ngIf="isPwd">
-      <div class="viewPwd" (click)="viewPwd()" tabindex="0">
-        <app-icon [icon]="faEye">Visualiser le mot de passe</app-icon>
-      </div>
+      <app-button className="btn-icon" (click)="viewPwd()" [icon]="faEye" iconDescription="See your password"></app-button>
     </ng-container>
+    <ng-content></ng-content>
   </div>
 </div>
