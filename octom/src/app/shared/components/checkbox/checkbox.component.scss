@@ -4,6 +4,7 @@
   align-items: center;
   flex: 1 0;
   position: absolute;
+  gap: 0.5em;
   label {
     padding: 0;
     @media screen and (max-width: 650px) {
@@ -16,10 +17,10 @@
     outline: none;
     width: 2em;
     height: 1em;
-    background-color: #d9dadc;
-    border: 1px solid #d9dadc;
+    background-color: #bcc8dc;
+    border: 1px solid #bcc8dc;
     border-radius: 15px;
-    box-shadow: inset -20px 0 0 0 #d9dadc;
+    box-shadow: inset -20px 0 0 0 #bcc8dc;
     transition-duration: 200ms;
     &:after {
       content: "";
@@ -28,18 +29,16 @@
       left: 1px;
       width: 1em;
       height: 0.7em;
-      background-color: #ffffff;
+      background-color: black;
       border-radius: 50%;
-      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 4px 6px #9cabc480
     }
     &:checked {
-      background-color: #ffffff;;
-      border-color: #007AFF;
-      box-shadow: inset 10px 0 0 0 #007AFF;
+      background-color: black;
+      border: 2.5px solid #5d77a2;
+      box-shadow: inset 10px 0 0 0 #5d77a2;
       &::after {
         display: none;
-        left: 20px;
-        box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
       }
     }
   }

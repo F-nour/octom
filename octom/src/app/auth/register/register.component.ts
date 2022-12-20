@@ -15,7 +15,7 @@ export class RegisterComponent {
 
   registerForm!: FormGroup
 
-  values: string[] = [''];
+  values: string[] = [];
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.nameForm = "register"
@@ -37,10 +37,13 @@ export class RegisterComponent {
   }
 
   addValues() {
-    for (let i = 1 ; i <= 300 ; i ++) {
-      this.values.push(`+${i}`);
+    if (this.values != null) {
+      for (let i = 1; i <= 300; i++) {
+        this.values.push(`+${i}`);
+      }
     }
   }
+
 
   get name() { return this.registerForm.get('name'); }
   get firstname() { return this.registerForm.get('firstname'); }

@@ -21,16 +21,13 @@ form {
 
 app-input {
   min-width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 a {
-  color: #007AFF;
   text-align: center;
-  &:hover, &:focus {
-    color: #0061a7
-  }
 }
 
 .form-group-buttons, app-button, app-submit-button {
@@ -51,7 +48,8 @@ a {
   flex-direction: row;
   gap: 1em;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex: 1 auto;
   width: 100%;
 }
 

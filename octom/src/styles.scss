@@ -13,6 +13,10 @@ html, body {
 a {
   text-decoration: none;
   font-weight: bold;
+  color: #bcc8dc;
+  &:hover, &:focus {
+    color: #5d77a2;
+  }
 }
 
 .sr-only {
@@ -31,7 +35,6 @@ a {
 }
 
 .search-bar {
-  background-color: black;
   width: 300px;
   height: 64px;
   margin-top: 0.5em;

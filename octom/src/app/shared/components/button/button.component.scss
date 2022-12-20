@@ -6,6 +6,9 @@
   outline: none;
   font-weight: bold;
   height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   &:disabled {
     cursor: not-allowed;
@@ -14,26 +17,23 @@
 
 .btn-primary {
   color: #fff;
-  background-color: #007AFF;
+  background-color: #5d77a2;
   &:hover, &:focus {
-    background-color: #0061a7
+    background-color: #384861;
   }
   &:disabled {
-    background-color: #5f85a7;
+    background-color: #bcc8dc;
     cursor: not-allowed;
     &:hover, &:focus {
-      background-color: #5f85a7;
+      background-color: #9BABC5;
     }
   }
 }
 
 .btn-google {
   color: #fff;
-  background-color: #333333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #111111;
   &:hover, &:focus {
-    background-color: #111111;
+    background-color: #333333;
   }
 }

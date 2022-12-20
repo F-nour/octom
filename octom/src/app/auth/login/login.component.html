@@ -3,10 +3,11 @@
   <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
     <app-input
       [nameForm]="nameForm"
-      label="login"
+      label="Username"
       field="username"
       type="email"
-      ph="Email or phone number"
+      ph="Enter your email address"
+      [required]="true"
     ></app-input>
     <app-input
       [nameForm]="nameForm"

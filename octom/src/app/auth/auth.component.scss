@@ -7,7 +7,7 @@
 }
 
 .background {
-  background-image: url("/assets/images/auth/photo.png");
+  background-image: url("https://picsum.photos/600");
   background-size: cover;
   background-position: center;
   width: 70%;
@@ -18,8 +18,7 @@
 
 .auth-content {
   width: 30%;
-  background-color: #fff;
-  color: black;
+  background-color: #1E1F25;
   @media screen and (max-width: 650px) {
     width: 100%;
   }
