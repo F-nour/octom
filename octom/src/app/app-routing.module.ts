@@ -45,6 +45,8 @@ const routes: Routes = [
     component: FilesComponent,
     title: parentTitle + 'files'
   },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
 ];
 
 

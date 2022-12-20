@@ -30,9 +30,6 @@ import { SettingsModule } from './settings/settings.module';
     MessengerModule,
     SettingsModule,
   ],
-  exports: [
-    AppRoutingModule,
-  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'octom';
   isLoginPage: boolean = false;
 
-  ngOnInit(): void {};
+  constructor(private router: Router) { }
 
+  ngOnInit(): void {
+    this.showCoreComponents();
+  };
 
+  showCoreComponents(): void {
+    this.router.events.forEach((event) => {
+      if (event instanceof NavigationStart) {
+        if (event['url'].includes('/auth')) {
+          this.isLoginPage = true;
+        } else {
+          this.isLoginPage = false;
+        }
+      }
+    });
   }
+}
