@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit {
       "files"
     ]
 
-    this.version = require('../../../package.json').version;
+    this.version = require('/package.json').version;
   }
 
   ngOnInit(): void {
