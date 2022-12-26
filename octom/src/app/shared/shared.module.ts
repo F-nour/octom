@@ -8,6 +8,7 @@ import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 
 
@@ -19,6 +20,7 @@ import { SubmitButtonComponent } from './components/submit-button/submit-button.
     IconComponent,
     SubmitButtonComponent,
     SelectComponent,
+    SearchbarComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import { SubmitButtonComponent } from './components/submit-button/submit-button.
     IconComponent,
     SubmitButtonComponent,
     SelectComponent,
+    SearchbarComponent
   ]
 })
 export class SharedModule { }

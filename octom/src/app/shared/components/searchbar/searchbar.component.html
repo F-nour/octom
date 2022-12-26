@@ -1,0 +1,6 @@
+<form [formGroup]="search" (ngSubmit)="searchSubmit()" class="search-form">
+  <input-component [labelUnvisible]="true" [nameForm]="field" [label]="field | titlecase " [field]="field" [ph]="placeHolder" [inputClassName]="className" [required]="true">
+    <submit-component className="btn-icon" [icon]="searchIcon" [iconDescription]="field | titlecase ">
+    </submit-component>
+  </input-component>
+</form>

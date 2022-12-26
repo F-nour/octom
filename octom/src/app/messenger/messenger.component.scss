@@ -1,0 +1,14 @@
+.messenger-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex: 1 0;
+}
+
+messenger-content {
+  width: 50%;
+}
+
+messenger-list, messenger-info {
+  width: 25%;
+}

@@ -12,25 +12,12 @@ export class HeaderComponent implements OnInit {
 
   pathImage: string;
 
-  search!: FormGroup
 
-  field!: string;
-
-  searchIcon = faSearch;
-
-  constructor( private formBuilder: FormBuilder) {
+  constructor() {
     this.pathImage = '/assets/images/header/';
-    this.field = 'search';
   }
 
   ngOnInit(): void {
-    this.search = this.formBuilder.group({
-      search: ['', [Validators.required, Validators.minLength(3)]],
-    });
-  }
 
-  searchSubmit(): void {
-    console.log(this.search.value);
-    if (this.search.valid) console.log("it's ok!")
   }
 }
