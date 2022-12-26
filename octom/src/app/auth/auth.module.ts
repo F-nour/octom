@@ -7,7 +7,6 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from '../shared/shared.module';
-import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({

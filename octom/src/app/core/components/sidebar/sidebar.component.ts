@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faAssistiveListeningSystems, faBookOpen, faCloudArrowDown, faDashboard, faFile, faGear, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  version: string;
-  items: string[];
+  version!  : string;
+  items!: string[];
+  iconItems!: IconDefinition[];
 
   constructor() {
+  }
+
+  ngOnInit(): void {
+    this.version = require('/package.json').version;
+
     this.items = [
       "dashboard",
       "activity",
@@ -20,10 +28,14 @@ export class SidebarComponent implements OnInit {
       "files"
     ]
 
-    this.version = require('/package.json').version;
-  }
-
-  ngOnInit(): void {
+    this.iconItems = [
+      faDashboard,
+      faCloudArrowDown,
+      faBookOpen,
+      faGear,
+      faPaperPlane,
+      faFile,
+    ]
   }
 
 }

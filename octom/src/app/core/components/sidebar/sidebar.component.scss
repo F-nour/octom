@@ -32,8 +32,13 @@
     width: max-content;
     height: max-content;
     line-height: 0;
+    color: #5F6388;
+    &:hover, &:focus {
+      color: #fff;
+    }
   }
   .is-active {
     background-color: #5051F9;
+    color: #fff;
   }
 }

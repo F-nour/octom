@@ -1,17 +1,21 @@
 <div class="sidebar">
   <div class="logo">
-    <img src="/assets/images/logo.png" alt="Octom">
+    <img src="/assets/images/logo.png" alt="Octom" />
   </div>
   <nav class="menu" role="navigation">
     <ul>
-      <ng-container *ngFor="let item of items" role="navigation">
-        <li routerLink='/{{item}}' routerLinkActive="is-active" title="{{item}}">
-          <img class="menu__icon" src="/assets/images/sidebar/{{item}}-icon.svg" alt={{item}} />
-        </li>
+      <ng-container *ngFor="let item of items ; let i = index" role="navigation">
+          <li
+            routerLink="/{{ item }}"
+            routerLinkActive="is-active"
+            title="{{ item }}"
+          >
+          <app-icon [icon]="iconItems[i]">{{ item }}</app-icon>
+          </li>
       </ng-container>
     </ul>
   </nav>
   <div [hidden]>
-    <small>v{{version}}</small>
+    <small>v{{ version }}</small>
   </div>
 </div>
