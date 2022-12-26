@@ -3,7 +3,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormControlDirective, ControlContainer } from '@angular/forms';
 
 @Component({
-  selector: 'app-select',
+  selector: 'select-component',
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss']
 })

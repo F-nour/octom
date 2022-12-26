@@ -1,10 +1,10 @@
 <header>
   <div class="search-bar">
     <form [formGroup]="search" (ngSubmit)="searchSubmit()" class="search-form">
-      <app-input [labelUnvisible]="true" [nameForm]="field" [label]="field | titlecase " [field]="field" ph="{{field | titlecase }} everything..." [required]="true">
-        <app-submit-button className="btn-icon" [icon]="searchIcon" [iconDescription]="field | titlecase ">
-        </app-submit-button>
-      </app-input>
+      <input-component [labelUnvisible]="true" [nameForm]="field" [label]="field | titlecase " [field]="field" ph="{{field | titlecase }} everything..." [required]="true">
+        <submit-component className="btn-icon" [icon]="searchIcon" [iconDescription]="field | titlecase ">
+        </submit-component>
+      </input-component>
   </form>
   </div>
   <div class="settings">

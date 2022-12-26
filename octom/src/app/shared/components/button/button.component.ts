@@ -3,7 +3,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-button',
+  selector: 'button-component',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })

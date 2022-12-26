@@ -3,7 +3,7 @@ import { FormArray, FormBuilder, FormGroup, ValidatorFn, Validators } from '@ang
 import { Router, RouteReuseStrategy, Routes } from '@angular/router';
 
 @Component({
-  selector: 'app-register',
+  selector: 'register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })

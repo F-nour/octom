@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-icon',
+  selector: 'icon-component',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })

@@ -1,21 +1,21 @@
 <div class="register">
   <h2>Register you !</h2>
   <form [formGroup]="registerForm" (ngSubmit)="registerFormSubmit()">
-    <app-input
+    <input-component
       [nameForm]="nameForm"
       label="first name"
       field="firstname"
       ph="first name"
       [required]="true"
     >
-    </app-input>
-    <app-input
+    </input-component>
+    <input-component
       [nameForm]="nameForm"
       label="Last name"
       field="name"
       ph="Last name"
       [required]="true"
-    ></app-input>
+    ></input-component>
     <div formArrayName="phones" class="phones">
       <small class="phone-label"
         >Phone number <span class="required">*</span></small
@@ -25,24 +25,24 @@
         [formGroupName]="i"
         class="phone"
       >
-        <app-select
+        <select-component
           [nameForm]="nameForm"
           label="Phone prefix"
           [labelUnvisible]="true"
           field="phonePrefix"
           [values]="values"
-        ></app-select>
-        <app-input
+        ></select-component>
+        <input-component
           containerClassName="phone-group"
           [nameForm]="nameForm"
           [labelUnvisible]="true"
           field="phoneNumber"
           ph="0123456789"
           [required]="true"
-        ></app-input>
+        ></input-component>
       </div>
     </div>
-    <app-input
+    <input-component
       [nameForm]="nameForm"
       label="Username"
       field="username"
@@ -50,8 +50,8 @@
       type="email"
       [required]="true"
     >
-    </app-input>
-    <app-input
+    </input-component>
+    <input-component
       [nameForm]="nameForm"
       label="Password"
       field="password"
@@ -59,10 +59,10 @@
       ph="Enter password"
       [required]="true"
     >
-    </app-input>
+    </input-component>
     <div class="form-group-buttons">
-      <app-submit-button [disabled]="registerForm.invalid"
-        >Register</app-submit-button
+      <submit-component [disabled]="registerForm.invalid"
+        >Register</submit-component
       >
       <a routerLink="/auth/login">Sign in</a>
     </div>

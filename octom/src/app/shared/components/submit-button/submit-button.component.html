@@ -1,6 +1,6 @@
 <button type="submit" [class]="'btn btn-primary ' + className" [disabled]="disabled">
   <ng-content></ng-content>
   <ng-container *ngIf="icon">
-    <app-icon [icon]="icon">{{ iconDescription }}</app-icon>
+    <icon-component [icon]="icon">{{ iconDescription }}</icon-component>
   </ng-container>
 </button>

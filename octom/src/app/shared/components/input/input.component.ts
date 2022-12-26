@@ -4,7 +4,7 @@ import { ControlContainer, ControlValueAccessor, FormControl, FormControlDirecti
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-input',
+  selector: 'input-component',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
   providers: [

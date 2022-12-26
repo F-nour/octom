@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angu
 import { ControlValueAccessor, FormControl, FormControlDirective, ControlContainer } from '@angular/forms';
 
 @Component({
-  selector: 'app-checkbox',
+  selector: 'checkbox-component',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss']
 })

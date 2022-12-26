@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-messenger-info',
+  selector: 'messenger-info',
   templateUrl: './messenger-info.component.html',
   styleUrls: ['./messenger-info.component.scss']
 })

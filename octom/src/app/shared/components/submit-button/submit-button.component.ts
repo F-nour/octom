@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
-  selector: 'app-submit-button',
+  selector: 'submit-component',
   templateUrl: './submit-button.component.html',
   styleUrls: ['./submit-button.component.scss']
 })

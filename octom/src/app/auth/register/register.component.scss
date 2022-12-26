@@ -19,7 +19,7 @@ form {
   padding-bottom: 2em;
 }
 
-app-input {
+input-component {
   min-width: 50%;
   width: 100%;
   display: flex;
@@ -30,7 +30,7 @@ a {
   text-align: center;
 }
 
-.form-group-buttons, app-button, app-submit-button {
+.form-group-buttons, button-component, submit-component {
   display: flex;
   flex-direction: column;
   justify-content: center;

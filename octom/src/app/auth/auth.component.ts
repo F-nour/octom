@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })

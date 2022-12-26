@@ -1,15 +1,15 @@
 <div class="login">
   <h2>Nice to see you again</h2>
   <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
-    <app-input
+    <input-component
       [nameForm]="nameForm"
       label="Username"
       field="username"
       type="email"
       ph="Enter your email address"
       [required]="true"
-    ></app-input>
-    <app-input
+    ></input-component>
+    <input-component
       [nameForm]="nameForm"
       label="Password"
       field="password"
@@ -17,21 +17,21 @@
       ph="Enter password"
       [required]="true"
     >
-    </app-input>
+    </input-component>
     <div class="login-check">
-      <app-checkbox
+      <checkbox-component
         [nameForm]="nameForm"
         label="Remember me"
         field="remember"
-      ></app-checkbox>
+      ></checkbox-component>
       <a routerLink="/auth/forgot-password">Forgot password</a>
     </div>
     <div class="form-group-buttons">
-      <app-submit-button [disabled]="loginForm.invalid">Sign in</app-submit-button>
-      <app-button type="button" className="btn-google">
+      <submit-component [disabled]="loginForm.invalid">Sign in</submit-component>
+      <button-component type="button" className="btn-google">
         <img class="google" src="/assets/images/auth/google.svg" [hidden] />
         <span>Or sign in with Google</span>
-      </app-button>
+      </button-component>
         <p>Don't have an account ? <a routerLink="/auth/register">Sign up</a>
     </div>
   </form>
