@@ -3,6 +3,11 @@
   width: 100%;
   justify-content: space-between;
   flex: 1 0;
+  height: 100vh;
+}
+
+messenger-list, messenger-content, messenger-info {
+  padding: 0 1em;
 }
 
 messenger-content {
@@ -11,4 +16,12 @@ messenger-content {
 
 messenger-list, messenger-info {
   width: 25%;
+}
+
+messenger-list {
+  background-color: rgb(18, 19, 20);
+}
+
+messenger-info {
+  background-color: #1E1F25;
 }
