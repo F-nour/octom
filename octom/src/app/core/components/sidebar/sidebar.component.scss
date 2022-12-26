@@ -1,20 +1,10 @@
 .sidebar {
-  background-color: #1e1f25;
-  width: 6em;
-  height: 100vh;
-  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  left: 0;
-  .logo {
-    justify-self: flex-start;
-    width: 64px;
-    height: 64px;
-    padding: 1em;
-  }
+  height: 100%;
+  z-index: 25;
 }
 
 .menu {

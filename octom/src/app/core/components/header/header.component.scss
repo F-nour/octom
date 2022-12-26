@@ -1,10 +1,14 @@
 header {
-  background-color: #1E1F25;
-  height: max-content;
-  width: 100vw;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  justify-self: flex-start;
+  width: 64px;
+  height: 64px;
+  padding-left: 1em;
 }
 
 .search-form {
@@ -15,9 +19,6 @@ header {
 
 
 .settings {
-  position: absolute;
-  top: 0;
-  right: 0;
   padding-right: 1em;
   ul, li {
     display: flex;
