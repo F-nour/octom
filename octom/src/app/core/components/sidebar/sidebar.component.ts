@@ -9,7 +9,6 @@ import { faAssistiveListeningSystems, faBookOpen, faCloudArrowDown, faDashboard,
 })
 export class SidebarComponent implements OnInit {
 
-  version!  : string;
   items!: string[];
   iconItems!: IconDefinition[];
 
@@ -17,8 +16,6 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.version = require('/package.json').version;
-
     this.items = [
       "dashboard",
       "activity",

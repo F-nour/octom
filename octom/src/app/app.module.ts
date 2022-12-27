@@ -23,7 +23,6 @@ import { SettingsModule } from './settings/settings.module';
     AppRoutingModule,
     AuthModule,
     CoreModule,
-    SharedModule,
     ActivityModule,
     DashboardModule,
     EbooksModule,

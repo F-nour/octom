@@ -6,14 +6,14 @@ app-header {
   left: 0;
   z-index: 50;
   width: 100%;
-  height: 6em;
+  height: 5em;
 }
 
 app-sidebar {
   background-color: #1e1f25;
-  width: 6em;
-  height: 100vh;
+  width: 5em;
+  min-height: 50%;
+  height: 100%;
   position: fixed;
-  top: 0;
   left: 0;
 }
