@@ -1,5 +1,8 @@
 <div class="login">
   <h2>Nice to see you again</h2>
+  <div *ngIf="error" class="alert-error error">
+    <p>{{ error }}</p>
+  </div>
   <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
     <input-component
             [nameForm]="nameForm"

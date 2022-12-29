@@ -44,10 +44,18 @@
     </div>
     <input-component
       [nameForm]="nameForm"
-      label="Username"
-      field="username"
+      label="email"
+      field="email"
       ph="Email address"
       type="email"
+      [required]="true"
+    ></input-component>
+    <input-component
+      [nameForm]="nameForm"
+      label="username"
+      field="username"
+      ph="Username"
+      type="username"
       [required]="true"
     >
     </input-component>

@@ -11,7 +11,8 @@ import {AuthGuard} from "./core/guards/auth.guard";
 const parentTitle = 'Octom - '
 
 const routes: Routes = [
-	{ path: 'dashboard', component: DashboardComponent, title: 'dashboard', canActivate: [AuthGuard] },
+	{
+		path: 'dashboard', component: DashboardComponent, title: parentTitle + 'dashboard', canActivate: [AuthGuard] },
 	{ path: 'activity', component: ActivityComponent, title: parentTitle + 'activity', canActivate: [AuthGuard] },
 	{ path: 'ebooks', component: EbooksComponent, title: parentTitle + 'ebooks', canActivate: [AuthGuard] },
 	{ path: 'settings', component: SettingsComponent, title: parentTitle + 'settings', canActivate: [AuthGuard] },

@@ -29,7 +29,8 @@ export class RegisterComponent {
 			name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
 			firstname: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
 			phones: this.formBuilder.array([]),
-			username: ['', [Validators.required, Validators.email]],
+			email: ['', [Validators.required, Validators.email]],
+			username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]],
 			password: ['', [Validators.required, Validators.minLength(8)]],
 		})
 		
@@ -57,6 +58,10 @@ export class RegisterComponent {
 		return this.registerForm.get('phones') as FormArray;
 	}
 	
+	get email() {
+		return this.registerForm.get('email');
+	}
+
 	get username() {
 		return this.registerForm.get('username');
 	}
