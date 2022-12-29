@@ -12,6 +12,7 @@ export class SidebarComponent implements OnInit {
   items!: string[];
   iconItems!: IconDefinition[];
 
+
   constructor() {
   }
 

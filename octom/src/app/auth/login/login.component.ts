@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {AuthService} from "../../core/services/auth.service";
 
 @Component({
 	selector: 'login',
@@ -14,7 +15,11 @@ export class LoginComponent implements OnInit {
 	
 	loginForm!: FormGroup;
 	
-	constructor(private formBuilder: FormBuilder, private router: Router) {
+	constructor(
+		private formBuilder: FormBuilder,
+		private router: Router,
+		private auth: AuthService
+	) {
 		this.nameForm = "auth"
 	}
 	
@@ -37,6 +42,9 @@ export class LoginComponent implements OnInit {
 	
 	loginFormSubmit() {
 		if (this.loginForm.invalid) return;
+		this.auth.login();
 		this.router.navigate(['dashboard']);
 	}
+
+
 }

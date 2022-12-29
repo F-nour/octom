@@ -10,9 +10,10 @@
         <li>
           <img src="{{pathImage}}notification-2-line-1.png" alt="Notification"/>
         </li>
-        <li>
-          <img src="{{pathImage}}profil.png">
-          <img src="{{pathImage}}chevron.png">
+        <li (click)="logout()">
+          <img src="{{pathImage}}profil.png" aria-hidden="true">
+          <img src="{{pathImage}}chevron.png" aria-hidden="true">
+          <span class="sr-only">Log out</span>
         </li>
       </ul>
   </div>
