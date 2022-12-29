@@ -19,7 +19,7 @@ export class SearchbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.search = this.formBuilder.group({
-      search: ['', [Validators.required, Validators.minLength(3)]],
+      search: ['', [Validators.minLength(3)]],
     });
     this.field = 'search';
   }

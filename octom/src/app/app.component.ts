@@ -7,7 +7,7 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isLoginPage: boolean = false;
+  isLoginPage!: boolean;
 
   constructor(private router: Router) { }
 
@@ -18,11 +18,7 @@ export class AppComponent {
   showCoreComponents(): void {
     this.router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        if (event['url'].includes('/auth')) {
-          this.isLoginPage = true;
-        } else {
-          this.isLoginPage = false;
-        }
+        this.isLoginPage = event['url'].includes('/auth');
       }
     });
   }

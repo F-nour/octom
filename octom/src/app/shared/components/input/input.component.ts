@@ -30,7 +30,7 @@ export class InputComponent implements ControlValueAccessor {
   @Input() labelUnvisible: boolean = false;
   @Input() ph: string = '';
   @Input() required!: boolean
-  isPwd: boolean = true;
+  isPwd!: boolean;
   @Input() formControl: FormControl<any> | any;
   @Input() formControlName!: string;
 

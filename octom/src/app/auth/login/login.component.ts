@@ -18,13 +18,10 @@ export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
 
-  user$!: Observable<User>;
-
-  error!: string
+  error!: string;
 
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router,
     private auth: AuthService,
     private userService: UserService
   ) {
@@ -52,7 +49,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return
     }
-    this.auth.login(this.loginForm.value, this.error);
+    this.auth.login(this.loginForm, this.error);
   }
 
 

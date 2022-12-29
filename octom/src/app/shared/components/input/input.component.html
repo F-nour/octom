@@ -6,7 +6,7 @@
     </small>
   </label>
   <div class="form-input"
-          [ngClass]="{'is-error': control?.touched && control?.errors, 'is-valid': control?.valid}">
+          [ngClass]="{'is-error': control?.touched && control?.errors, 'is-valid': control?.touched && control?.valid}">
     <input
             [class]="'form-control ' + inputClassName"
             [type]="type"

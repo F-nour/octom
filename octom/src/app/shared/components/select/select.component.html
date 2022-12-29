@@ -1,7 +1,6 @@
 <div class="form-group"><label [for]="id" class="form-label">
-  <small [ngClass]="{ 'sr-only': labelUnvisible }"
-  >{{ label }}
-    <span *ngIf="required" class="required"> * </span>
+  <small [ngClass]="{ 'sr-only': labelUnvisible }">{{ label }}
+    <span [ngClass]="{'required': required}"> * </span>
   </small>
 </label>
   <select

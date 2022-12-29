@@ -15,13 +15,15 @@ export class AuthService {
   }
 
   login(body: any, error: string) {
-    this.http.post<User>('https://dummyjson.com/auth/login', body).subscribe(user => {
+    this.http.post<User>('https://dummyjson.com/auth/login', body.value).subscribe(user => {
       this.user = user;
       this.token = JSON.stringify(user.username);
       localStorage.setItem('authToken', this.token)
       this.router.navigate(['dashboard']);
     }, (err) => {
+      body.isInvalid;
       error = err.error.message;
+      return error;
     });
   }
 
