@@ -1,11 +1,14 @@
 <div [class]="'form-group ' + containerClassName">
   <input
-    [class]="'form-control form-checkbox ' + inputClassName"
-    type="checkbox"
-    [id]="id"
-    [name]="field" #checkbox [formControl]="control"
+          [class]="'form-control form-checkbox ' + inputClassName"
+          type="checkbox"
+          [id]="id"
+          [name]="field" #checkbox [formControl]="control"
   />
   <label [for]="id" class="form-label">
     <small>{{ label }}</small>
   </label>
+</div>
+<div class="error" *ngIf="control?.touched && control?.errors">
+  <small>this {{ label | lowercase }} is invalid</small>
 </div>

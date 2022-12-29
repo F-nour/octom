@@ -10,8 +10,6 @@ import { SelectComponent } from './components/select/select.component';
 import { SubmitButtonComponent } from './components/submit-button/submit-button.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
-
-
 @NgModule({
   declarations: [
     InputComponent,

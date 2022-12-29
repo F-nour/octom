@@ -1,23 +1,31 @@
 <div [class]="'form-group ' + containerClassName">
   <label [for]="id" class="form-label">
     <small [ngClass]="{ 'sr-only': labelUnvisible }"
-      >{{ label }}
+    >{{ label }}
       <span *ngIf="required" class="required"> * </span>
     </small>
   </label>
-  <div class="form-input">
+  <div class="form-input"
+          [ngClass]="{'is-error': control?.touched && control?.errors, 'is-valid': control?.valid}">
     <input
-      [class]="'form-control ' + inputClassName"
-      [type]="type"
-      [id]="id"
-      [name]="field"
-      [placeholder]="ph"
-      [formControl]="control"
-      [required]="required"
+            [class]="'form-control ' + inputClassName"
+            [type]="type"
+            [id]="id"
+            [name]="field"
+            [placeholder]="ph"
+            [formControl]="control"
+            [required]="required"
     />
     <ng-container *ngIf="isPwd">
-      <button-component className="btn-icon" (click)="viewPwd()" [icon]="faEye" iconDescription="See your password"></button-component>
+      <button-component className="btn-icon"
+              (click)="viewPwd()"
+              [icon]="faEye"
+              iconDescription="See your password"></button-component>
     </ng-container>
     <ng-content></ng-content>
   </div>
+  <div class="error" *ngIf="control?.touched && control?.errors">
+    <small>this {{ label | lowercase }} is invalid</small>
+  </div>
 </div>
+

@@ -1,18 +1,23 @@
-<label [for]="id" class="form-label">
+<div class="form-group"><label [for]="id" class="form-label">
   <small [ngClass]="{ 'sr-only': labelUnvisible }"
-    >{{ label }}
+  >{{ label }}
     <span *ngIf="required" class="required"> * </span>
   </small>
 </label>
-<select
-  [formControl]="control"
-  class="form-select"
-  [id]="id"
-  [name]="field"
-  [required]="required"
->
-  <option selected value="">{{ label }}...</option>
-  <ng-container *ngFor="let value of values">
-    <option value="{{ value }}">{{ value }}</option>
-  </ng-container>
-</select>
+  <select
+          [formControl]="control"
+          class="form-select"
+          [id]="id"
+          [name]="field"
+          [required]="required"
+  >
+    <option selected value="">{{ label }}...</option>
+    <ng-container *ngFor="let value of values">
+      <option value="{{ value }}">{{ value }}</option>
+    </ng-container>
+  </select>
+  <div class="error" *ngIf="control?.touched && control?.errors">
+    <small>this {{ label | lowercase }} is invalid</small>
+  </div>
+</div>
+

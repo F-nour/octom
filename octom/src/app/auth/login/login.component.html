@@ -2,27 +2,27 @@
   <h2>Nice to see you again</h2>
   <form [formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
     <input-component
-      [nameForm]="nameForm"
-      label="Username"
-      field="username"
-      type="email"
-      ph="Enter your email address"
-      [required]="true"
+            [nameForm]="nameForm"
+            label="Username"
+            field="username"
+            type="email"
+            ph="Enter your email address"
+            [required]="true"
     ></input-component>
     <input-component
-      [nameForm]="nameForm"
-      label="Password"
-      field="password"
-      type="password"
-      ph="Enter password"
-      [required]="true"
+            [nameForm]="nameForm"
+            label="Password"
+            field="password"
+            type="password"
+            ph="Enter password"
+            [required]="true"
     >
     </input-component>
     <div class="login-check">
       <checkbox-component
-        [nameForm]="nameForm"
-        label="Remember me"
-        field="remember"
+              [nameForm]="nameForm"
+              label="Remember me"
+              field="remember"
       ></checkbox-component>
       <a routerLink="/auth/forgot-password">Forgot password</a>
     </div>
@@ -32,7 +32,7 @@
         <img class="google" src="/assets/images/auth/google.svg" [hidden] />
         <span>Or sign in with Google</span>
       </button-component>
-        <p>Don't have an account ? <a routerLink="/auth/register">Sign up</a>
+      <p>Don't have an account ? <a routerLink="/auth/register">Sign up</a>
     </div>
   </form>
 </div>
