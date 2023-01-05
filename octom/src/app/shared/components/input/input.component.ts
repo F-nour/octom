@@ -49,27 +49,23 @@ export class InputComponent implements ControlValueAccessor {
 
   // get controlName with control
   get control() {
-    if (this.controlContainer.control) return this.controlContainer.control.get(this.formControlName);
-    return this.formControl
+    return this.controlContainer.control ? this.controlContainer.control.get(this.formControlName) : this.formControl;
   }
 
 
   // register value on touch
   registerOnTouched(fn: any): void {
-    if (this.formControlDirective.valueAccessor)
-    this.formControlDirective.valueAccessor.registerOnTouched(fn);
+    this.formControlDirective.valueAccessor?.registerOnTouched(fn);
   }
 
     // register value if change
   registerOnChange(fn: any): void {
-    if (this.formControlDirective.valueAccessor)
-    this.formControlDirective.valueAccessor.registerOnChange(fn);
+    this.formControlDirective.valueAccessor?.registerOnChange(fn);
   }
 
   // write value of input on object
   writeValue(obj: any): void {
-    if (this.formControlDirective.valueAccessor)
-    this.formControlDirective.valueAccessor.writeValue(obj);
+    this.formControlDirective.valueAccessor?.writeValue(obj);
   }
 
   viewPwd() {

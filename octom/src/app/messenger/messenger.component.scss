@@ -1,13 +1,11 @@
 .messenger-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  position: fixed;
 }
 
 messenger-list, messenger-content, messenger-info {
   padding: 0 1em;
+  border: 1px solid red;
 }
 
 messenger-content {

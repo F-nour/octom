@@ -17,6 +17,15 @@
   align-items: center;
 }
 
+checkbox-component {
+  min-width: 5em;
+}
+
+.login-check {
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
 form {
   display: flex;
   flex-direction: column;
